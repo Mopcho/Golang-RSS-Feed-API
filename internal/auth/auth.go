@@ -9,7 +9,7 @@ import (
 // Example:
 // Authroziation: ApiKey{insert_api_ley_here}
 func GetAPIKey(headers http.Header) (string, error) {
-	val := headers.Get("Authroziation")
+	val := headers.Get("Authorization")
 
 	if val == "" {
 		return "", errors.New("No authentication key found")
